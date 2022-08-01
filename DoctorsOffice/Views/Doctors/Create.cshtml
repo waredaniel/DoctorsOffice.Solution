@@ -9,6 +9,8 @@
 {
   @Html.LabelFor(model => model.DoctorName)
   @Html.TextBoxFor(model => model.DoctorName)
+  @Html.LabelFor(model => model.DoctorSpecialty)
+  @Html.TextBoxFor(model => model.DoctorSpecialty)
   <input type="submit" value="Register a new Doctor" />
 }
 <p>@Html.ActionLink("Show All Doctors", "Index")</p>
