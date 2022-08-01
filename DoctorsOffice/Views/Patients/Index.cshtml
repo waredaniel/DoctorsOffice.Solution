@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@using DoctorsOffice.Models
+
+<ul>
+  @foreach(Patient patient in Model)
+  {
+    <li>@Html.ActionLink($"{patient.PatientName}", "Details", new { id = patient.PatientId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add new Patient", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

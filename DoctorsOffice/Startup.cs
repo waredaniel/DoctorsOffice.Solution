@@ -25,7 +25,7 @@ namespace DoctorsOffice
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<ToDoListContext>(options => options
+        .AddDbContext<DoctorsOfficeContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 

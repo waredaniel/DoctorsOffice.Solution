@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+@using DoctorsOffice.Models;
+
+<h1>Our Doctors:</h1>
+
+@if (@Model.Count == 0)
+{ 
+  <h3>No Doctors have been added yet</h3>
+}
+
+<ul>
+  @foreach(Doctor doctor in Model)
+  {
+    <li>@Html.ActionLink($"{doctor.DoctorName}", "Details", new { id = doctor.DoctorId })</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Register as a new doctor", "Create")</p>
+
+<p>@Html.ActionLink("Add a new doctor", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

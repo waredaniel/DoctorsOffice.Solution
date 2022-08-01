@@ -16,7 +16,7 @@ namespace DoctorsOffice.Models
 
       var builder = new DbContextOptionsBuilder<DoctorsOfficeContext>();
 
-      builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"] ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
+      builder.UseMySql(configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(configuration["ConnectionStrings:DefaultConnection"]));
 
       return new DoctorsOfficeContext(builder.Options);
     }
