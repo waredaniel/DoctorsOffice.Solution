@@ -14,9 +14,9 @@
 
   @Html.LabelFor(model => model.PatientName)
   @Html.EditorFor(model => model.PatientName)
+  @Html.LabelFor(model => model.PatientBirthdate)
+  @Html.EditorFor(model => model.PatientBirthdate)
 
-  @Html.Label("Select Doctor")
-  @Html.DropDownList("DoctorId")
 
   <input type="submit" value="Save" />
 }
